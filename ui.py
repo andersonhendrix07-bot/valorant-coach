@@ -27,6 +27,7 @@ INK_2 = "#c3c2b7"
 MUTED = "#898781"
 GRID = "#2c2c2a"
 AXIS = "#383835"
+CHART_TEXT = "#8a8f98"
 
 ROLE_ICON = {"Duelist": "⚔️", "Initiator": "🔎", "Controller": "🌫️", "Sentinel": "🛡️", "Unknown": "❔"}
 CATEGORY_COLOR = {"Climbing": "#3987e5", "Aim": "#d95926", "Agent role": "#9085e9", "Side": "#199e70"}
@@ -51,12 +52,12 @@ def num(v, nd=0, unit="", plus=False) -> str:
 CSS = f"""
 <style>
 :root {{ --accent:{ACCENT}; --ink:{INK}; --ink2:{INK_2}; --muted:{MUTED};
-        --card:rgba(255,255,255,0.035); --line:rgba(255,255,255,0.10); }}
+        --card:#161a23; --line:rgba(255,255,255,0.12); }}
 .block-container {{ padding-top: 1.6rem; max-width: 1250px; }}
 h1, h2, h3 {{ letter-spacing: .01em; }}
 .vc-card {{ background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px 18px; }}
 .vc-hero {{ display:flex; flex-wrap:wrap; gap:22px; align-items:center; justify-content:space-between;
-           background:linear-gradient(120deg, rgba(255,70,85,.16), rgba(255,255,255,.02) 55%);
+           background:linear-gradient(120deg, rgba(255,70,85,.22), rgba(22,26,35,0) 55%), var(--card);
            border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:16px; padding:20px 24px; }}
 .vc-name {{ font-size:1.9rem; font-weight:800; color:var(--ink); line-height:1.1; }}
 .vc-name span {{ color:var(--muted); font-weight:600; }}
@@ -76,7 +77,7 @@ h1, h2, h3 {{ letter-spacing: .01em; }}
 .vc-kpi .l {{ color:var(--muted); font-size:.74rem; text-transform:uppercase; letter-spacing:.06em; }}
 .vc-kpi .v {{ color:var(--ink); font-size:1.55rem; font-weight:800; margin-top:2px; }}
 .vc-kpi .s {{ color:var(--ink2); font-size:.78rem; }}
-.vc-focus {{ border:1px solid rgba(255,70,85,.45); background:rgba(255,70,85,.08); border-radius:14px;
+.vc-focus {{ border:1px solid rgba(255,70,85,.55); background:#2a161b; border-radius:14px;
             padding:14px 18px; margin:14px 0; }}
 .vc-focus .h {{ color:var(--accent); font-weight:800; font-size:.78rem; text-transform:uppercase; letter-spacing:.08em; }}
 .vc-focus .t {{ color:var(--ink); font-weight:700; margin:4px 0; }}
@@ -109,6 +110,9 @@ h1, h2, h3 {{ letter-spacing: .01em; }}
 .vc-r .t {{ font-size:.55rem; font-weight:800; background:rgba(0,0,0,.35); border-radius:3px; padding:0 2px; margin-top:1px; }}
 .vc-r.half {{ margin-left:10px; }}
 .vc-legend {{ color:var(--muted); font-size:.75rem; }}
+/* Cards carry their own dark surface, so they stay readable on Streamlit's light OR dark theme. */
+.vc-card, .vc-kpi, .vc-tip, .vc-hero, .vc-focus {{ color:var(--ink); }}
+.vc-card b, .vc-tip b {{ color:var(--ink); }}
 .vc-foot {{ color:var(--muted); font-size:.75rem; margin-top:28px; border-top:1px solid var(--line); padding-top:10px; }}
 div.stButton > button[kind="primary"] {{ background:var(--accent); border-color:var(--accent); }}
 </style>
@@ -282,10 +286,12 @@ def _base(height=220) -> dict:
         "background": "transparent",
         "config": {
             "view": {"stroke": None},
-            "axis": {"labelColor": MUTED, "titleColor": INK_2, "gridColor": GRID, "domainColor": AXIS,
-                     "tickColor": AXIS, "labelFontSize": 11, "titleFontWeight": 600},
-            "legend": {"labelColor": INK_2, "titleColor": INK_2},
-            "title": {"color": INK, "anchor": "start", "fontSize": 13},
+            # neutral grays readable on both Streamlit's light and dark themes
+            "axis": {"labelColor": CHART_TEXT, "titleColor": CHART_TEXT, "gridColor": "rgba(128,128,128,0.22)",
+                     "domainColor": "rgba(128,128,128,0.5)", "tickColor": "rgba(128,128,128,0.5)",
+                     "labelFontSize": 11, "titleFontWeight": 600},
+            "legend": {"labelColor": CHART_TEXT, "titleColor": CHART_TEXT},
+            "title": {"color": CHART_TEXT, "anchor": "start", "fontSize": 13},
         },
     }
 

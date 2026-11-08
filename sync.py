@@ -65,7 +65,9 @@ def sync_player(client: HenrikClient | None, cache: Cache, riot_id_raw: str, reg
     account = cache.get_account(str(rid))
     if account is None:
         if client is None:
-            raise ValorantAPIError("This account isn't cached yet and no API key is configured.")
+            raise ValorantAPIError("This player isn't saved on the server yet, so there's nothing to show from "
+                                   "cache. Untick 'Use cached data only' and click Load / refresh to download "
+                                   "their matches.")
         account = client.get_account(rid)
         cache.put_account(str(rid), account)
     puuid = account["puuid"]

@@ -1,0 +1,2190 @@
+{
+ "metadata": {
+  "match_id": "aaaaaaaa-0000-0000-0000-000000000001",
+  "map": {
+   "id": "m",
+   "name": "Ascent"
+  },
+  "game_version": "release-12.10",
+  "game_length_in_ms": 2100000,
+  "started_at": "2026-11-01T18:00:00.000Z",
+  "is_completed": true,
+  "queue": {
+   "id": "competitive",
+   "mode_type": "Standard",
+   "name": "Competitive"
+  },
+  "season": {
+   "id": "s",
+   "short": "e12a3"
+  },
+  "platform": "pc",
+  "party_rr_penaltys": [],
+  "cluster": "Chicago",
+  "region": "na",
+  "premier": null
+ },
+ "players": [
+  {
+   "puuid": "me-puuid",
+   "name": "Hendrix",
+   "tag": "NA1",
+   "team_id": "Red",
+   "platform": "pc",
+   "party_id": "p-me-puuid",
+   "agent": {
+    "id": "agent-jett",
+    "name": "Jett"
+   },
+   "stats": {
+    "score": 2010,
+    "kills": 5,
+    "deaths": 4,
+    "assists": 1,
+    "headshots": 6,
+    "bodyshots": 10,
+    "legshots": 4,
+    "damage": {
+     "dealt": 1830,
+     "received": 600
+    }
+   },
+   "ability_casts": {
+    "ability1": 5,
+    "ability2": 4,
+    "grenade": 6,
+    "ultimate": 1
+   },
+   "economy": {
+    "spent": {
+     "overall": 0,
+     "average": 0.0
+    },
+    "loadout_value": {
+     "overall": 0,
+     "average": 3500.0
+    }
+   },
+   "behavior": {
+    "afk_rounds": 0,
+    "rounds_in_spawn": 0,
+    "friendly_fire": {
+     "incoming": 0,
+     "outgoing": 0
+    }
+   },
+   "tier": {
+    "id": 15,
+    "name": "Gold 1"
+   },
+   "customization": {
+    "card": "c",
+    "title": "t",
+    "preferred_level_border": null
+   },
+   "account_level": 100,
+   "session_playtime_in_ms": 0
+  },
+  {
+   "puuid": "r2",
+   "name": "r2",
+   "tag": "0000",
+   "team_id": "Red",
+   "platform": "pc",
+   "party_id": "p-r2",
+   "agent": {
+    "id": "agent-sova",
+    "name": "Sova"
+   },
+   "stats": {
+    "score": 3000,
+    "kills": 10,
+    "deaths": 10,
+    "assists": 3,
+    "headshots": 5,
+    "bodyshots": 20,
+    "legshots": 2,
+    "damage": {
+     "dealt": 2000,
+     "received": 2000
+    }
+   },
+   "ability_casts": {
+    "ability1": null,
+    "ability2": null,
+    "grenade": null,
+    "ultimate": null
+   },
+   "economy": {
+    "spent": {
+     "overall": 0,
+     "average": 0.0
+    },
+    "loadout_value": {
+     "overall": 0,
+     "average": 3000.0
+    }
+   },
+   "behavior": {
+    "afk_rounds": 0,
+    "rounds_in_spawn": 0,
+    "friendly_fire": {
+     "incoming": 0,
+     "outgoing": 0
+    }
+   },
+   "tier": {
+    "id": 15,
+    "name": "Gold 1"
+   },
+   "customization": {
+    "card": "c",
+    "title": "t",
+    "preferred_level_border": null
+   },
+   "account_level": 100,
+   "session_playtime_in_ms": 0
+  },
+  {
+   "puuid": "r3",
+   "name": "r3",
+   "tag": "0000",
+   "team_id": "Red",
+   "platform": "pc",
+   "party_id": "p-r3",
+   "agent": {
+    "id": "agent-sova",
+    "name": "Sova"
+   },
+   "stats": {
+    "score": 3000,
+    "kills": 10,
+    "deaths": 10,
+    "assists": 3,
+    "headshots": 5,
+    "bodyshots": 20,
+    "legshots": 2,
+    "damage": {
+     "dealt": 2000,
+     "received": 2000
+    }
+   },
+   "ability_casts": {
+    "ability1": null,
+    "ability2": null,
+    "grenade": null,
+    "ultimate": null
+   },
+   "economy": {
+    "spent": {
+     "overall": 0,
+     "average": 0.0
+    },
+    "loadout_value": {
+     "overall": 0,
+     "average": 3000.0
+    }
+   },
+   "behavior": {
+    "afk_rounds": 0,
+    "rounds_in_spawn": 0,
+    "friendly_fire": {
+     "incoming": 0,
+     "outgoing": 0
+    }
+   },
+   "tier": {
+    "id": 15,
+    "name": "Gold 1"
+   },
+   "customization": {
+    "card": "c",
+    "title": "t",
+    "preferred_level_border": null
+   },
+   "account_level": 100,
+   "session_playtime_in_ms": 0
+  },
+  {
+   "puuid": "r4",
+   "name": "r4",
+   "tag": "0000",
+   "team_id": "Red",
+   "platform": "pc",
+   "party_id": "p-r4",
+   "agent": {
+    "id": "agent-sova",
+    "name": "Sova"
+   },
+   "stats": {
+    "score": 3000,
+    "kills": 10,
+    "deaths": 10,
+    "assists": 3,
+    "headshots": 5,
+    "bodyshots": 20,
+    "legshots": 2,
+    "damage": {
+     "dealt": 2000,
+     "received": 2000
+    }
+   },
+   "ability_casts": {
+    "ability1": null,
+    "ability2": null,
+    "grenade": null,
+    "ultimate": null
+   },
+   "economy": {
+    "spent": {
+     "overall": 0,
+     "average": 0.0
+    },
+    "loadout_value": {
+     "overall": 0,
+     "average": 3000.0
+    }
+   },
+   "behavior": {
+    "afk_rounds": 0,
+    "rounds_in_spawn": 0,
+    "friendly_fire": {
+     "incoming": 0,
+     "outgoing": 0
+    }
+   },
+   "tier": {
+    "id": 15,
+    "name": "Gold 1"
+   },
+   "customization": {
+    "card": "c",
+    "title": "t",
+    "preferred_level_border": null
+   },
+   "account_level": 100,
+   "session_playtime_in_ms": 0
+  },
+  {
+   "puuid": "r5",
+   "name": "r5",
+   "tag": "0000",
+   "team_id": "Red",
+   "platform": "pc",
+   "party_id": "p-r5",
+   "agent": {
+    "id": "agent-sova",
+    "name": "Sova"
+   },
+   "stats": {
+    "score": 3000,
+    "kills": 10,
+    "deaths": 10,
+    "assists": 3,
+    "headshots": 5,
+    "bodyshots": 20,
+    "legshots": 2,
+    "damage": {
+     "dealt": 2000,
+     "received": 2000
+    }
+   },
+   "ability_casts": {
+    "ability1": null,
+    "ability2": null,
+    "grenade": null,
+    "ultimate": null
+   },
+   "economy": {
+    "spent": {
+     "overall": 0,
+     "average": 0.0
+    },
+    "loadout_value": {
+     "overall": 0,
+     "average": 3000.0
+    }
+   },
+   "behavior": {
+    "afk_rounds": 0,
+    "rounds_in_spawn": 0,
+    "friendly_fire": {
+     "incoming": 0,
+     "outgoing": 0
+    }
+   },
+   "tier": {
+    "id": 15,
+    "name": "Gold 1"
+   },
+   "customization": {
+    "card": "c",
+    "title": "t",
+    "preferred_level_border": null
+   },
+   "account_level": 100,
+   "session_playtime_in_ms": 0
+  },
+  {
+   "puuid": "b1",
+   "name": "b1",
+   "tag": "0000",
+   "team_id": "Blue",
+   "platform": "pc",
+   "party_id": "p-b1",
+   "agent": {
+    "id": "agent-omen",
+    "name": "Omen"
+   },
+   "stats": {
+    "score": 3000,
+    "kills": 10,
+    "deaths": 10,
+    "assists": 3,
+    "headshots": 5,
+    "bodyshots": 20,
+    "legshots": 2,
+    "damage": {
+     "dealt": 2000,
+     "received": 2000
+    }
+   },
+   "ability_casts": {
+    "ability1": null,
+    "ability2": null,
+    "grenade": null,
+    "ultimate": null
+   },
+   "economy": {
+    "spent": {
+     "overall": 0,
+     "average": 0.0
+    },
+    "loadout_value": {
+     "overall": 0,
+     "average": 3000.0
+    }
+   },
+   "behavior": {
+    "afk_rounds": 0,
+    "rounds_in_spawn": 0,
+    "friendly_fire": {
+     "incoming": 0,
+     "outgoing": 0
+    }
+   },
+   "tier": {
+    "id": 15,
+    "name": "Gold 1"
+   },
+   "customization": {
+    "card": "c",
+    "title": "t",
+    "preferred_level_border": null
+   },
+   "account_level": 100,
+   "session_playtime_in_ms": 0
+  },
+  {
+   "puuid": "b2",
+   "name": "b2",
+   "tag": "0000",
+   "team_id": "Blue",
+   "platform": "pc",
+   "party_id": "p-b2",
+   "agent": {
+    "id": "agent-omen",
+    "name": "Omen"
+   },
+   "stats": {
+    "score": 3000,
+    "kills": 10,
+    "deaths": 10,
+    "assists": 3,
+    "headshots": 5,
+    "bodyshots": 20,
+    "legshots": 2,
+    "damage": {
+     "dealt": 2000,
+     "received": 2000
+    }
+   },
+   "ability_casts": {
+    "ability1": null,
+    "ability2": null,
+    "grenade": null,
+    "ultimate": null
+   },
+   "economy": {
+    "spent": {
+     "overall": 0,
+     "average": 0.0
+    },
+    "loadout_value": {
+     "overall": 0,
+     "average": 3000.0
+    }
+   },
+   "behavior": {
+    "afk_rounds": 0,
+    "rounds_in_spawn": 0,
+    "friendly_fire": {
+     "incoming": 0,
+     "outgoing": 0
+    }
+   },
+   "tier": {
+    "id": 15,
+    "name": "Gold 1"
+   },
+   "customization": {
+    "card": "c",
+    "title": "t",
+    "preferred_level_border": null
+   },
+   "account_level": 100,
+   "session_playtime_in_ms": 0
+  },
+  {
+   "puuid": "b3",
+   "name": "b3",
+   "tag": "0000",
+   "team_id": "Blue",
+   "platform": "pc",
+   "party_id": "p-b3",
+   "agent": {
+    "id": "agent-omen",
+    "name": "Omen"
+   },
+   "stats": {
+    "score": 3000,
+    "kills": 10,
+    "deaths": 10,
+    "assists": 3,
+    "headshots": 5,
+    "bodyshots": 20,
+    "legshots": 2,
+    "damage": {
+     "dealt": 2000,
+     "received": 2000
+    }
+   },
+   "ability_casts": {
+    "ability1": null,
+    "ability2": null,
+    "grenade": null,
+    "ultimate": null
+   },
+   "economy": {
+    "spent": {
+     "overall": 0,
+     "average": 0.0
+    },
+    "loadout_value": {
+     "overall": 0,
+     "average": 3000.0
+    }
+   },
+   "behavior": {
+    "afk_rounds": 0,
+    "rounds_in_spawn": 0,
+    "friendly_fire": {
+     "incoming": 0,
+     "outgoing": 0
+    }
+   },
+   "tier": {
+    "id": 15,
+    "name": "Gold 1"
+   },
+   "customization": {
+    "card": "c",
+    "title": "t",
+    "preferred_level_border": null
+   },
+   "account_level": 100,
+   "session_playtime_in_ms": 0
+  },
+  {
+   "puuid": "b4",
+   "name": "b4",
+   "tag": "0000",
+   "team_id": "Blue",
+   "platform": "pc",
+   "party_id": "p-b4",
+   "agent": {
+    "id": "agent-omen",
+    "name": "Omen"
+   },
+   "stats": {
+    "score": 3000,
+    "kills": 10,
+    "deaths": 10,
+    "assists": 3,
+    "headshots": 5,
+    "bodyshots": 20,
+    "legshots": 2,
+    "damage": {
+     "dealt": 2000,
+     "received": 2000
+    }
+   },
+   "ability_casts": {
+    "ability1": null,
+    "ability2": null,
+    "grenade": null,
+    "ultimate": null
+   },
+   "economy": {
+    "spent": {
+     "overall": 0,
+     "average": 0.0
+    },
+    "loadout_value": {
+     "overall": 0,
+     "average": 3000.0
+    }
+   },
+   "behavior": {
+    "afk_rounds": 0,
+    "rounds_in_spawn": 0,
+    "friendly_fire": {
+     "incoming": 0,
+     "outgoing": 0
+    }
+   },
+   "tier": {
+    "id": 15,
+    "name": "Gold 1"
+   },
+   "customization": {
+    "card": "c",
+    "title": "t",
+    "preferred_level_border": null
+   },
+   "account_level": 100,
+   "session_playtime_in_ms": 0
+  },
+  {
+   "puuid": "b5",
+   "name": "b5",
+   "tag": "0000",
+   "team_id": "Blue",
+   "platform": "pc",
+   "party_id": "p-b5",
+   "agent": {
+    "id": "agent-omen",
+    "name": "Omen"
+   },
+   "stats": {
+    "score": 3000,
+    "kills": 10,
+    "deaths": 10,
+    "assists": 3,
+    "headshots": 5,
+    "bodyshots": 20,
+    "legshots": 2,
+    "damage": {
+     "dealt": 2000,
+     "received": 2000
+    }
+   },
+   "ability_casts": {
+    "ability1": null,
+    "ability2": null,
+    "grenade": null,
+    "ultimate": null
+   },
+   "economy": {
+    "spent": {
+     "overall": 0,
+     "average": 0.0
+    },
+    "loadout_value": {
+     "overall": 0,
+     "average": 3000.0
+    }
+   },
+   "behavior": {
+    "afk_rounds": 0,
+    "rounds_in_spawn": 0,
+    "friendly_fire": {
+     "incoming": 0,
+     "outgoing": 0
+    }
+   },
+   "tier": {
+    "id": 15,
+    "name": "Gold 1"
+   },
+   "customization": {
+    "card": "c",
+    "title": "t",
+    "preferred_level_border": null
+   },
+   "account_level": 100,
+   "session_playtime_in_ms": 0
+  }
+ ],
+ "observers": [],
+ "coaches": [],
+ "teams": [
+  {
+   "team_id": "Red",
+   "rounds": {
+    "won": 13,
+    "lost": 1
+   },
+   "won": true,
+   "premier_roster": null
+  },
+  {
+   "team_id": "Blue",
+   "rounds": {
+    "won": 1,
+    "lost": 13
+   },
+   "won": false,
+   "premier_roster": null
+  }
+ ],
+ "rounds": [
+  {
+   "id": 0,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": {
+    "round_time_in_ms": 40000,
+    "site": "A",
+    "location": {
+     "x": 0,
+     "y": 0
+    },
+    "player": {
+     "puuid": "r3",
+     "name": "r3",
+     "tag": "0000",
+     "team": "Red"
+    },
+    "player_locations": []
+   },
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": 1,
+      "ability_2": 0,
+      "grenade": 1,
+      "ultimate": 0
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 150
+      }
+     ],
+     "stats": {
+      "score": 250,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 800,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 1,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": {
+    "round_time_in_ms": 40000,
+    "site": "A",
+    "location": {
+     "x": 0,
+     "y": 0
+    },
+    "player": {
+     "puuid": "me-puuid",
+     "name": "Hendrix",
+     "tag": "NA1",
+     "team": "Red"
+    },
+    "player_locations": []
+   },
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 300
+      }
+     ],
+     "stats": {
+      "score": 400,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 1500,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Blue",
+   "plant": null,
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 50
+      }
+     ],
+     "stats": {
+      "score": 0,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 4500,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": null,
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 80
+      }
+     ],
+     "stats": {
+      "score": 60,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 4700,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": {
+    "round_time_in_ms": 40000,
+    "site": "A",
+    "location": {
+     "x": 0,
+     "y": 0
+    },
+    "player": {
+     "puuid": "r3",
+     "name": "r3",
+     "tag": "0000",
+     "team": "Red"
+    },
+    "player_locations": []
+   },
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 100
+      }
+     ],
+     "stats": {
+      "score": 100,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 3899,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": null,
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 100
+      }
+     ],
+     "stats": {
+      "score": 100,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 3900,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": null,
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 100
+      }
+     ],
+     "stats": {
+      "score": 100,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 3900,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": null,
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 100
+      }
+     ],
+     "stats": {
+      "score": 100,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 3900,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": null,
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 100
+      }
+     ],
+     "stats": {
+      "score": 100,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 3900,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": null,
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 100
+      }
+     ],
+     "stats": {
+      "score": 100,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 3900,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": null,
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 100
+      }
+     ],
+     "stats": {
+      "score": 100,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 3900,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": null,
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 100
+      }
+     ],
+     "stats": {
+      "score": 100,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 3900,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": {
+    "round_time_in_ms": 40000,
+    "site": "A",
+    "location": {
+     "x": 0,
+     "y": 0
+    },
+    "player": {
+     "puuid": "b1",
+     "name": "b1",
+     "tag": "0000",
+     "team": "Blue"
+    },
+    "player_locations": []
+   },
+   "defuse": {
+    "round_time_in_ms": 80000,
+    "location": {
+     "x": 0,
+     "y": 0
+    },
+    "player": {
+     "puuid": "me-puuid",
+     "name": "Hendrix",
+     "tag": "NA1",
+     "team": "Red"
+    },
+    "player_locations": []
+   },
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 200
+      }
+     ],
+     "stats": {
+      "score": 300,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 800,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "result": "Elimination",
+   "ceremony": "CeremonyDefault",
+   "winning_team": "Red",
+   "plant": null,
+   "defuse": null,
+   "stats": [
+    {
+     "player": {
+      "puuid": "me-puuid",
+      "name": "Hendrix",
+      "tag": "NA1",
+      "team": "Red"
+     },
+     "ability_casts": {
+      "ability_1": null,
+      "ability_2": null,
+      "grenade": null,
+      "ultimate": null
+     },
+     "damage_events": [
+      {
+       "player": {
+        "puuid": "enemy",
+        "name": "enemy",
+        "tag": "0000",
+        "team": "X"
+       },
+       "bodyshots": 1,
+       "headshots": 0,
+       "legshots": 0,
+       "damage": 250
+      }
+     ],
+     "stats": {
+      "score": 200,
+      "kills": 0,
+      "headshots": 0,
+      "bodyshots": 0,
+      "legshots": 0
+     },
+     "economy": {
+      "loadout_value": 4000,
+      "remaining": 0,
+      "armor": null,
+      "weapon": null
+     },
+     "was_afk": false,
+     "received_penalty": false,
+     "stayed_in_spawn": false
+    }
+   ]
+  }
+ ],
+ "kills": [
+  {
+   "time_in_round_in_ms": 10000,
+   "time_in_match_in_ms": 10000,
+   "round": 0,
+   "killer": {
+    "puuid": "me-puuid",
+    "name": "Hendrix",
+    "tag": "NA1",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 15000,
+   "time_in_match_in_ms": 15000,
+   "round": 0,
+   "killer": {
+    "puuid": "b2",
+    "name": "b2",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "victim": {
+    "puuid": "me-puuid",
+    "name": "Hendrix",
+    "tag": "NA1",
+    "team": "Red"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 17000,
+   "time_in_match_in_ms": 17000,
+   "round": 0,
+   "killer": {
+    "puuid": "r2",
+    "name": "r2",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b2",
+    "name": "b2",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 5000,
+   "time_in_match_in_ms": 105000,
+   "round": 1,
+   "killer": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "victim": {
+    "puuid": "r2",
+    "name": "r2",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 8000,
+   "time_in_match_in_ms": 108000,
+   "round": 1,
+   "killer": {
+    "puuid": "me-puuid",
+    "name": "Hendrix",
+    "tag": "NA1",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 9000,
+   "time_in_match_in_ms": 109000,
+   "round": 1,
+   "killer": {
+    "puuid": "me-puuid",
+    "name": "Hendrix",
+    "tag": "NA1",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b3",
+    "name": "b3",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [
+    {
+     "puuid": "r3",
+     "name": "r3",
+     "tag": "0000",
+     "team": "Red"
+    }
+   ],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 3000,
+   "time_in_match_in_ms": 203000,
+   "round": 2,
+   "killer": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "victim": {
+    "puuid": "me-puuid",
+    "name": "Hendrix",
+    "tag": "NA1",
+    "team": "Red"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 10000,
+   "time_in_match_in_ms": 210000,
+   "round": 2,
+   "killer": {
+    "puuid": "r2",
+    "name": "r2",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 4000,
+   "time_in_match_in_ms": 304000,
+   "round": 3,
+   "killer": {
+    "puuid": "r2",
+    "name": "r2",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [
+    {
+     "puuid": "me-puuid",
+     "name": "Hendrix",
+     "tag": "NA1",
+     "team": "Red"
+    }
+   ],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 6000,
+   "time_in_match_in_ms": 306000,
+   "round": 3,
+   "killer": {
+    "puuid": "b2",
+    "name": "b2",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "victim": {
+    "puuid": "me-puuid",
+    "name": "Hendrix",
+    "tag": "NA1",
+    "team": "Red"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 12000,
+   "time_in_match_in_ms": 312000,
+   "round": 3,
+   "killer": {
+    "puuid": "r3",
+    "name": "r3",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b2",
+    "name": "b2",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 5000,
+   "time_in_match_in_ms": 405000,
+   "round": 4,
+   "killer": {
+    "puuid": "r2",
+    "name": "r2",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 5000,
+   "time_in_match_in_ms": 505000,
+   "round": 5,
+   "killer": {
+    "puuid": "r2",
+    "name": "r2",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 5000,
+   "time_in_match_in_ms": 605000,
+   "round": 6,
+   "killer": {
+    "puuid": "r2",
+    "name": "r2",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 5000,
+   "time_in_match_in_ms": 705000,
+   "round": 7,
+   "killer": {
+    "puuid": "r2",
+    "name": "r2",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 5000,
+   "time_in_match_in_ms": 805000,
+   "round": 8,
+   "killer": {
+    "puuid": "r2",
+    "name": "r2",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 5000,
+   "time_in_match_in_ms": 905000,
+   "round": 9,
+   "killer": {
+    "puuid": "r2",
+    "name": "r2",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 5000,
+   "time_in_match_in_ms": 1005000,
+   "round": 10,
+   "killer": {
+    "puuid": "r2",
+    "name": "r2",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 5000,
+   "time_in_match_in_ms": 1105000,
+   "round": 11,
+   "killer": {
+    "puuid": "r2",
+    "name": "r2",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 20000,
+   "time_in_match_in_ms": 1220000,
+   "round": 12,
+   "killer": {
+    "puuid": "me-puuid",
+    "name": "Hendrix",
+    "tag": "NA1",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b1",
+    "name": "b1",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 2000,
+   "time_in_match_in_ms": 1302000,
+   "round": 13,
+   "killer": {
+    "puuid": "b3",
+    "name": "b3",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "victim": {
+    "puuid": "r4",
+    "name": "r4",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 2500,
+   "time_in_match_in_ms": 1302500,
+   "round": 13,
+   "killer": {
+    "puuid": "me-puuid",
+    "name": "Hendrix",
+    "tag": "NA1",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b3",
+    "name": "b3",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 4000,
+   "time_in_match_in_ms": 1304000,
+   "round": 13,
+   "killer": {
+    "puuid": "b4",
+    "name": "b4",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "victim": {
+    "puuid": "me-puuid",
+    "name": "Hendrix",
+    "tag": "NA1",
+    "team": "Red"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  },
+  {
+   "time_in_round_in_ms": 8000,
+   "time_in_match_in_ms": 1308000,
+   "round": 13,
+   "killer": {
+    "puuid": "r5",
+    "name": "r5",
+    "tag": "0000",
+    "team": "Red"
+   },
+   "victim": {
+    "puuid": "b4",
+    "name": "b4",
+    "tag": "0000",
+    "team": "Blue"
+   },
+   "assistants": [],
+   "location": {
+    "x": 0,
+    "y": 0
+   },
+   "weapon": {
+    "id": "w",
+    "name": "Vandal",
+    "type": "Weapon"
+   },
+   "secondary_fire_mode": false,
+   "player_locations": []
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+[
+ {
+  "match_id": "bbbbbbbb-0000-0000-0000-000000000002",
+  "tier": {
+   "id": 15,
+   "name": "Gold 1"
+  },
+  "map": {
+   "id": "m",
+   "name": "Bind"
+  },
+  "season": {
+   "id": "s",
+   "short": "e12a3"
+  },
+  "rr": 40,
+  "last_change": -18,
+  "elo": 1240,
+  "refunded_rr": 0,
+  "was_derank_protected": false,
+  "date": "2026-11-01T19:40:00.000Z"
+ },
+ {
+  "match_id": "aaaaaaaa-0000-0000-0000-000000000001",
+  "tier": {
+   "id": 15,
+   "name": "Gold 1"
+  },
+  "map": {
+   "id": "m",
+   "name": "Ascent"
+  },
+  "season": {
+   "id": "s",
+   "short": "e12a3"
+  },
+  "rr": 58,
+  "last_change": 21,
+  "elo": 1258,
+  "refunded_rr": 0,
+  "was_derank_protected": false,
+  "date": "2026-11-01T18:40:00.000Z"
+ }
+]

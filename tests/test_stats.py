@@ -271,3 +271,55 @@ def test_roles():
     from roles import role_of
     assert role_of("KAY/O") == "Initiator" and role_of("miks") == "Controller"
     assert role_of("NewAgent") == "Unknown" and role_of(None) == "Unknown"
+
+
+# --------------------------------------------------------------------------- multi-kills, clutches, weapons
+def _k(t, killer, victim):
+    return {"time_in_round_in_ms": t, "killer": {"puuid": killer}, "victim": {"puuid": victim}}
+
+
+TEAM, ENEMY = {"me", "t1", "t2"}, {"e1", "e2", "e3"}
+
+
+@pytest.mark.parametrize("kills,expected", [
+    ([_k(1, "e1", "t1"), _k(2, "e1", "t2")], 3),                                   # 1v3
+    ([_k(1, "t1", "e1"), _k(2, "e2", "t1"), _k(3, "e2", "t2")], 2),                # 1v2
+    ([_k(1, "e1", "me")], None),                                                    # I died first
+    ([_k(1, "me", "e1"), _k(2, "me", "e2"), _k(3, "t1", "e3"), _k(4, "x", "t1")], None),  # enemies already dead
+    # t1 dies, gets revived (kills e1), then t2 dies -> not alone; then t1 dies -> 1v2
+    ([_k(1, "e2", "t1"), _k(2, "t1", "e1"), _k(3, "e2", "t2"), _k(4, "e3", "t1")], 2),
+])
+def test_clutch_situation(kills, expected):
+    assert stats.clutch_situation(kills, "me", TEAM, ENEMY) == expected
+
+
+def test_multikills_weapons_no_clutch_in_fixtures(match_a, match_b):
+    a = stats.match_row(match_a, ME)
+    assert (a["k2"], a["k3"], a["k4"], a["aces"]) == (1, 0, 0, 0)          # round 2: 2 kills
+    assert a["clutch_attempts"] == 0 and stats.match_row(match_b, ME)["clutch_attempts"] == 0
+    _, rdf = stats.build_frames([match_a], ME)
+    wt = stats.weapon_table(rdf)
+    assert list(wt["weapon"]) == ["Vandal"] and wt["kills"].iloc[0] == 5 and wt["share_pct"].iloc[0] == 100.0
+
+
+def test_clutch_won_in_match(match_a):
+    # Round 5 (index 4): all four teammates die, I'm left 1v4, Red still wins the round.
+    extra = [("b2", "r2", 6000), ("b2", "r3", 7000), ("b3", "r4", 8000), ("b3", "r5", 9000)]
+    for killer, victim, t in extra:
+        match_a["kills"].append({"time_in_round_in_ms": t, "round": 4, "killer": {"puuid": killer, "team": "Blue"},
+                                 "victim": {"puuid": victim, "team": "Red"}, "assistants": [],
+                                 "weapon": {"name": "Phantom"}})
+    rows = stats.round_rows(match_a, ME)
+    assert rows[4]["clutch_vs"] == 4 and rows[4]["clutch_won"]
+    row = stats.match_row(match_a, ME)
+    assert row["clutch_attempts"] == 1 and row["clutches_won"] == 1
+    _, rdf = stats.build_frames([match_a], ME)
+    ct = stats.clutch_table(rdf)
+    assert ct.to_dict("records") == [{"situation": "1v4", "attempts": 1, "won": 1, "win_pct": 100.0}]
+    assert stats.summarize(stats.build_frames([match_a], ME)[0])["clutches_won"] == 1
+
+
+def test_recent_form(match_a, match_b):
+    mdf, _ = stats.build_frames([match_b, match_a], ME)
+    assert stats.recent_form(mdf) == ["Win", "Loss"]
+    assert stats.recent_form(mdf, 1) == ["Loss"]

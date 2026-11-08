@@ -12,7 +12,7 @@ from tips import Tip
 
 CSV_COLS = ["started_at", "match_id", "map", "agent", "role", "result", "score", "rounds",
             "kills", "deaths", "assists", "kd", "acs", "adr", "hs_pct", "first_kills", "first_deaths",
-            "kast_pct", "plants", "defuses", "avg_loadout", "casts_per_round", "rr_change",
+            "kast_pct", "k2", "k3", "k4", "aces", "clutch_attempts", "clutches_won", "plants", "defuses", "avg_loadout", "casts_per_round", "rr_change",
             "attack_rounds", "attack_won", "defense_rounds", "defense_won", "side_check",
             "after_loss_streak", "session", "session_game", "tracker_url"]
 
@@ -80,6 +80,8 @@ def markdown_report(riot_id: str, region: str, mmr: dict | None, mdf: pd.DataFra
             f"KAST {_v(s['kast_pct'], 0, '%')}",
             f"- First kills/round {_v(s['fk_per_round'], 2)} · first deaths/round {_v(s['fd_per_round'], 2)} · "
             f"ability casts/round {_v(s['casts_per_round'], 2)}",
+            f"- Clutches won {s.get('clutches_won', 0)}/{s.get('clutch_attempts', 0)} · 3K+ rounds "
+            f"{s.get('multikills', 0)} · aces {s.get('aces', 0)}",
             "",
         ]
     lines += ["## Top tips", ""]

@@ -11,6 +11,10 @@ Definitions (also shown in the UI):
 - Side  = not a field in the API. Derived from the competitive rule: Red attacks rounds 1-12,
           Blue attacks 13-24, overtime alternates starting with Red. Every spike plant is used to
           check the rule; if plants contradict it the sides are flipped and the match is flagged.
+- Multi-kill = kills by me in one round (2K, 3K, 4K, 5K = ace).
+- Clutch    = I became my team's last player alive with at least one enemy alive (1vX, X = enemies
+          alive at that moment); won if my team then won the round. Alive state is rebuilt from kill
+          events; a player who gets a kill after dying is treated as revived.
 - Buy type (tool-defined thresholds, on MY loadout value at round start): pistol = rounds 1 and 13;
           eco < 2000; light 2000-3899; full >= 3900.
 """
@@ -121,6 +125,26 @@ def buy_type(round_index: int, loadout: float | None) -> str:
     return "full"
 
 
+def clutch_situation(round_kills: list[dict], me: str, my_team_ids: set[str], enemy_ids: set[str]) -> int | None:
+    """Number of enemies alive when `me` became the team's last player alive, else None.
+    `round_kills` must be sorted by time."""
+    alive_team, alive_enemy = set(my_team_ids), set(enemy_ids)
+    for k in round_kills:
+        killer, victim = _pid(k.get("killer")), _pid(k.get("victim"))
+        # a dead player getting a kill must have been revived (e.g. Sage ult)
+        if killer in my_team_ids:
+            alive_team.add(killer)
+        elif killer in enemy_ids:
+            alive_enemy.add(killer)
+        alive_team.discard(victim)
+        alive_enemy.discard(victim)
+        if alive_team == {me} and alive_enemy:
+            return len(alive_enemy)
+        if me not in alive_team:
+            return None
+    return None
+
+
 def round_rows(match: dict, puuid: str) -> list[dict]:
     """One row per round for `puuid`."""
     me = find_player(match, puuid)
@@ -129,6 +153,8 @@ def round_rows(match: dict, puuid: str) -> list[dict]:
     kills = match.get("kills") or []
     attackers, side_check = infer_sides(match)
     match_id = (match.get("metadata") or {}).get("match_id")
+    team_ids = {p["puuid"] for p in match.get("players") or [] if (p.get("team_id") or "").lower() == my_team}
+    enemy_ids = {p["puuid"] for p in match.get("players") or [] if p.get("puuid") and p["puuid"] not in team_ids}
 
     # rounds are referenced by `id` in kills[].round; map id -> list index
     id_to_idx = {r.get("id", i): i for i, r in enumerate(rounds)}
@@ -171,12 +197,18 @@ def round_rows(match: dict, puuid: str) -> list[dict]:
 
         plant, defuse = r.get("plant"), r.get("defuse")
         side = "attack" if attackers[i] == my_team else "defense"
+        won = (r.get("winning_team") or "").lower() == my_team
+        clutch_vs = clutch_situation(rk, puuid, team_ids, enemy_ids)
         out.append({
             "match_id": match_id,
             "round": i + 1,
             "side": side,
-            "won": (r.get("winning_team") or "").lower() == my_team,
+            "won": won,
             "kills": len(my_kills),
+            "kill_weapons": [((k.get("weapon") or {}).get("name") or (k.get("weapon") or {}).get("type")
+                              or "Ability / other") for k in my_kills],
+            "clutch_vs": clutch_vs,
+            "clutch_won": bool(clutch_vs) and won,
             "died": my_death is not None,
             "survived": my_death is None,
             "assisted": assisted,
@@ -272,6 +304,12 @@ def match_row(match: dict, puuid: str, rr_by_match: dict[str, int] | None = None
         "kast_rounds": sum(r["kast"] for r in rounds),
         "kast_pct": safe_div(100 * sum(r["kast"] for r in rounds), len(rounds)),
         "survived_rounds": sum(r["survived"] for r in rounds),
+        "k2": sum(r["kills"] == 2 for r in rounds),
+        "k3": sum(r["kills"] == 3 for r in rounds),
+        "k4": sum(r["kills"] == 4 for r in rounds),
+        "aces": sum(r["kills"] >= 5 for r in rounds),
+        "clutch_attempts": sum(r["clutch_vs"] is not None for r in rounds),
+        "clutches_won": sum(r["clutch_won"] for r in rounds),
         "plants": sum(r["planted"] for r in rounds),
         "defuses": sum(r["defused"] for r in rounds),
         "avg_loadout": avg_loadout,
@@ -376,6 +414,10 @@ def summarize(mdf: pd.DataFrame) -> dict:
                             if not casts_known.empty else None),
         "plants": int(mdf["plants"].sum()),
         "defuses": int(mdf["defuses"].sum()),
+        "multikills": int(mdf[["k3", "k4", "aces"]].sum().sum()) if "k3" in mdf else 0,
+        "aces": int(mdf["aces"].sum()) if "aces" in mdf else 0,
+        "clutches_won": int(mdf["clutches_won"].sum()) if "clutches_won" in mdf else 0,
+        "clutch_attempts": int(mdf["clutch_attempts"].sum()) if "clutch_attempts" in mdf else 0,
         "avg_loadout": mdf["avg_loadout"].mean() if mdf["avg_loadout"].notna().any() else None,
         "rr_total": int(mdf["rr_change"].dropna().sum()) if mdf["rr_change"].notna().any() else None,
     }
@@ -472,3 +514,35 @@ def retake_postplant(rdf: pd.DataFrame) -> dict:
         "retake_rounds": len(ret), "retake_win_pct": 100 * ret["won"].mean() if len(ret) else None,
         "postplant_rounds": len(post), "postplant_win_pct": 100 * post["won"].mean() if len(post) else None,
     }
+
+
+def weapon_table(rdf: pd.DataFrame) -> pd.DataFrame:
+    """Kills by weapon (from kill events). HS% per weapon is NOT available in the API data."""
+    if rdf.empty or "kill_weapons" not in rdf:
+        return pd.DataFrame(columns=["weapon", "kills", "share_pct"])
+    w = rdf["kill_weapons"].explode().dropna()
+    if w.empty:
+        return pd.DataFrame(columns=["weapon", "kills", "share_pct"])
+    t = w.value_counts().rename_axis("weapon").reset_index(name="kills")
+    t["share_pct"] = 100 * t["kills"] / t["kills"].sum()
+    return t
+
+
+def clutch_table(rdf: pd.DataFrame) -> pd.DataFrame:
+    """Clutch attempts and wins by situation (1v1 ... 1v5)."""
+    if rdf.empty or "clutch_vs" not in rdf:
+        return pd.DataFrame(columns=["situation", "attempts", "won", "win_pct"])
+    c = rdf.dropna(subset=["clutch_vs"])
+    if c.empty:
+        return pd.DataFrame(columns=["situation", "attempts", "won", "win_pct"])
+    g = c.groupby("clutch_vs").agg(attempts=("won", "size"), won=("clutch_won", "sum")).reset_index()
+    g["situation"] = g["clutch_vs"].astype(int).map(lambda n: f"1v{n}")
+    g["win_pct"] = 100 * g["won"] / g["attempts"]
+    return g[["situation", "attempts", "won", "win_pct"]]
+
+
+def recent_form(mdf: pd.DataFrame, n: int = 10) -> list[str]:
+    """Results of the last n games, oldest -> newest ('Win'/'Loss'/'Draw')."""
+    if mdf.empty:
+        return []
+    return list(mdf.sort_values("started_at", kind="stable")["result"].tail(n))

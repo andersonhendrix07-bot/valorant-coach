@@ -109,6 +109,9 @@ Tick **Use cached data only** to reopen your stats without making any API calls.
 | Loadout / eco rounds | `rounds[].stats[].economy.loadout_value` | buy-type thresholds are this tool's own (eco < 2000, light < 3900) |
 | Ability casts / round | `players[].ability_casts`, else per-round casts | |
 | RR change | MMR history `last_change` | games missing from RR history show `n/a` |
+| Multi-kills (2K–ace) | `kills[]` | kills by you in one round |
+| Clutches (1vX) | `kills[]` | you became your team's last player alive with enemies alive; revives inferred when a dead player gets a kill |
+| Kills by weapon | `kills[].weapon` | headshot % per weapon is not in the data |
 
 Not available, so not shown: utility damage or flash assists by type, and positional
 heatmaps (positions exist in the data but aren't used).
@@ -131,7 +134,8 @@ stats.py        per-round / per-match stats and aggregates
 roles.py        agent -> role map
 tips.py         rule-based tips engine
 report.py       CSV + Markdown export
-app.py          Streamlit UI
+app.py          Streamlit UI (layout)
+ui.py           CSS, HTML cards and chart specs (escaped, testable)
 tests/          pytest suite + JSON fixtures (synthetic, hand-checkable)
 scripts/save_fixture.py   save a real match as a fixture for invariant tests
 ```
